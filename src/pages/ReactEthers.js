@@ -7,7 +7,7 @@ import NetworkInfo from "../components/react-ethers/NetworkInfo"
 import UserInfo from "../components/react-ethers/UserInfo"
 import Results from "../components/react-ethers/Results"
 import Events from "../components/react-ethers/Events"
-import logo from "../assets/react-ethers.svg"
+import logo from "../custom-assets/react-ethers.svg"
 
 const ReactEthers = () => {
   const [contract, setContract] = useState({ address: "", abi: [], name: "" })
