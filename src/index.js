@@ -3,15 +3,22 @@ import ReactDOM from "react-dom"
 import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
-import { Web3Provider } from "web3-hooks"
+import { Web3ContextProvider } from "react-ethers"
 import { ChakraProvider } from "@chakra-ui/react"
 
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
-      <Web3Provider>
+      <Web3ContextProvider
+        customNetwork={[
+          {
+            chainId: 43114,
+            publicEndpoints: ["https://api.avax.network/ext/bc/C/rpc"],
+          },
+        ]}
+      >
         <App />
-      </Web3Provider>
+      </Web3ContextProvider>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root")

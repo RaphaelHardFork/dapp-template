@@ -1,5 +1,11 @@
+import ReactEthers from "./pages/ReactEthers"
+
 const Dapp = () => {
-  return <></>
+  return (
+    <>
+      <ReactEthers />
+    </>
+  )
 }
 
 export default Dapp
